@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Apply to Drive | Louise Transport</title>
+
+    <link rel="stylesheet" href="driver-signup.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">L</span>
+          <span class="logo-text"> Louise<span>Transport</span> </span>
+        </a>
+
+        <a href="driver.html" class="back-link"> ← Back to Driver Page </a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="signup-hero">
+      <div class="container">
+        <span class="eyebrow">LOUISE TRANSPORT</span>
+
+        <h1>
+          Become a Louise
+          <span>Driver.</span>
+        </h1>
+
+        <p>
+          Complete the application below to start your journey with Louise
+          Transport.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPLICATION -->
+    <main class="application-section">
+      <div class="container application-layout">
+        <!-- LEFT SIDE -->
+        <aside class="application-info">
+          <div class="info-card">
+            <span class="eyebrow">DRIVER APPLICATION</span>
+
+            <h2>
+              Let's get you
+              <span>on the road.</span>
+            </h2>
+
+            <p>
+              Tell us a little about yourself and your vehicle. Your information
+              will be reviewed before your driver account is approved.
+            </p>
+          </div>
+
+          <div class="steps">
+            <div class="side-step active">
+              <span>01</span>
+
+              <div>
+                <strong>Personal Details</strong>
+                <small>Your basic information</small>
+              </div>
+            </div>
+
+            <div class="side-step">
+              <span>02</span>
+
+              <div>
+                <strong>Vehicle Details</strong>
+                <small>Information about your car</small>
+              </div>
+            </div>
+
+            <div class="side-step">
+              <span>03</span>
+
+              <div>
+                <strong>Driver Details</strong>
+                <small>Licence and experience</small>
+              </div>
+            </div>
+
+            <div class="side-step">
+              <span>04</span>
+
+              <div>
+                <strong>Submit Application</strong>
+                <small>Review and submit</small>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- FORM -->
+        <div class="form-card">
+          <form>
+            <!-- PERSONAL INFORMATION -->
+            <div class="form-section">
+              <div class="form-heading">
+                <span>01</span>
+
+                <div>
+                  <h2>Personal Information</h2>
+
+                  <p>Enter your basic personal details.</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="firstName"> First Name </label>
+
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Enter your first name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName"> Last Name </label>
+
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Enter your last name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email"> Email Address </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone"> Phone Number </label>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+233 XX XXX XXXX"
+                    required
+                  />
+                </div>
+
+                <div class="form-group full">
+                  <label for="location"> City / Location </label>
+
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="e.g. Accra"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- VEHICLE INFORMATION -->
+            <div class="form-section">
+              <div class="form-heading">
+                <span>02</span>
+
+                <div>
+                  <h2>Vehicle Information</h2>
+
+                  <p>Tell us about the vehicle you will use.</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="vehicleType"> Vehicle Type </label>
+
+                  <select id="vehicleType" name="vehicleType" required>
+                    <option value="">Select vehicle type</option>
+
+                    <option value="sedan">Sedan</option>
+
+                    <option value="suv">SUV</option>
+
+                    <option value="hatchback">Hatchback</option>
+
+                    <option value="saloon">Saloon</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="vehicleModel"> Vehicle Model </label>
+
+                  <input
+                    type="text"
+                    id="vehicleModel"
+                    name="vehicleModel"
+                    placeholder="e.g. Toyota Corolla"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="vehicleYear"> Vehicle Year </label>
+
+                  <input
+                    type="number"
+                    id="vehicleYear"
+                    name="vehicleYear"
+                    placeholder="e.g. 2022"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="plateNumber"> Vehicle Number Plate </label>
+
+                  <input
+                    type="text"
+                    id="plateNumber"
+                    name="plateNumber"
+                    placeholder="e.g. GT 1234-24"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- DRIVER INFORMATION -->
+            <div class="form-section">
+              <div class="form-heading">
+                <span>03</span>
+
+                <div>
+                  <h2>Driver Information</h2>
+
+                  <p>Provide your driving information.</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="license"> Driver's Licence Number </label>
+
+                  <input
+                    type="text"
+                    id="license"
+                    name="license"
+                    placeholder="Enter licence number"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="experience"> Driving Experience </label>
+
+                  <select id="experience" name="experience" required>
+                    <option value="">Select experience</option>
+
+                    <option value="less-than-1">Less than 1 year</option>
+
+                    <option value="1-3">1–3 years</option>
+
+                    <option value="3-5">3–5 years</option>
+
+                    <option value="5-plus">More than 5 years</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="availability">
+                    When do you prefer to drive?
+                  </label>
+
+                  <select id="availability" name="availability" required>
+                    <option value="">Select availability</option>
+
+                    <option value="morning">Morning</option>
+
+                    <option value="afternoon">Afternoon</option>
+
+                    <option value="evening">Evening</option>
+
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- AGREEMENT -->
+            <div class="agreement-section">
+              <label class="checkbox-label">
+                <input type="checkbox" required />
+
+                <span>
+                  I confirm that the information provided is accurate and I
+                  agree to Louise Transport's driver terms and safety
+                  requirements.
+                </span>
+              </label>
+            </div>
+
+            <!-- SUBMIT -->
+            <button type="submit" class="submit-btn">
+              Submit Driver Application
+
+              <span>→</span>
+            </button>
+
+            <p class="secure-note">
+              🔒 Your application information should be handled securely and
+              used only for driver onboarding.
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-mark">L</span>
+
+            <span class="logo-text"> Louise<span>Transport</span> </span>
+          </a>
+
+          <p>Moving Ghana forward, one ride at a time.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="Driver hompeage index.html">Home</a>
+          <a href="book-ride.html">Book a Ride</a>
+          <a href="driver.html">Become a Driver</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        <p>© 2026 Louise Transport. All rights reserved.</p>
+      </div>
+    </footer>
+    <script type="module" src="driver-signup.js"></script>
+  </body>
+</html>
