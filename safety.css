@@ -1,0 +1,1097 @@
+/* ==========================================
+   LOUISE TRANSPORT - SAFETY PAGE
+   Main Safety Styles
+========================================== */
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f6f6f4;
+  color: #111111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.logo-text span {
+  color: #777777;
+  font-weight: 400;
+  margin-left: 3px;
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav a {
+  color: #555555;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #111111;
+}
+
+.nav a.active {
+  color: #111111;
+  font-weight: 800;
+}
+
+/* MOBILE MENU */
+
+.menu-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* ==========================================
+   GENERAL
+========================================== */
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #888888;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   SAFETY HERO
+========================================== */
+
+.safety-hero {
+  background: #111111;
+  color: #ffffff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.safety-hero-content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  max-width: 750px;
+  font-size: clamp(45px, 6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -4px;
+}
+
+.hero-text h1 span {
+  display: block;
+  color: #888888;
+}
+
+.hero-text p {
+  max-width: 600px;
+  margin-top: 25px;
+  color: #aaaaaa;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #ffffff;
+  color: #111111;
+  gap: 15px;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  background: #eeeeee;
+}
+
+.primary-btn span {
+  font-size: 18px;
+}
+
+.secondary-btn {
+  border: 1px solid #444444;
+  color: #ffffff;
+}
+
+.secondary-btn:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* HERO SAFETY CARD */
+
+.hero-safety-card {
+  min-height: 330px;
+  padding: 40px;
+  border: 1px solid #333333;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #181818;
+}
+
+.shield-icon {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+
+.hero-safety-card h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.hero-safety-card p {
+  color: #999999;
+  font-size: 13px;
+  max-width: 300px;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.section-heading p {
+  color: #777777;
+  margin-top: 15px;
+  font-size: 14px;
+  max-width: 600px;
+}
+
+/* ==========================================
+   SAFETY FEATURES
+========================================== */
+
+.safety-features {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 32px;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  background: #ffffff;
+
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 12px;
+  background: #111111;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   BEFORE YOUR RIDE
+========================================== */
+
+.before-ride {
+  padding: 100px 0;
+  background: #f6f6f4;
+}
+
+.before-ride-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.before-ride-text h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.before-ride-text p {
+  color: #777777;
+  font-size: 14px;
+  margin-top: 20px;
+  max-width: 450px;
+}
+
+/* CHECKLIST */
+
+.safety-checklist {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: 10px 30px;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 25px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.check-item:last-child {
+  border-bottom: none;
+}
+
+.check-item > span {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.check-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-item strong {
+  font-size: 14px;
+}
+
+.check-item small {
+  color: #888888;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ==========================================
+   DURING YOUR RIDE
+========================================== */
+
+.during-ride {
+  background: #111111;
+  color: #ffffff;
+  padding: 100px 0;
+}
+
+.section-heading.light .eyebrow {
+  color: #777777;
+}
+
+.section-heading.light h2 {
+  color: #ffffff;
+}
+
+.section-heading.light p {
+  color: #999999;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.help-card {
+  padding: 35px;
+  border: 1px solid #2d2d2d;
+  border-radius: 18px;
+  background: #181818;
+}
+
+.help-icon {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.help-card h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.help-card p {
+  color: #999999;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 65px;
+}
+
+.help-card a,
+.help-card button {
+  display: inline-block;
+  margin-top: 22px;
+  background: none;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.help-card a:hover,
+.help-card button:hover {
+  color: #aaaaaa;
+}
+
+/* ==========================================
+   EMERGENCY SECTION
+========================================== */
+
+.emergency-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.emergency-card {
+  background: #f1f1ef;
+  border-radius: 20px;
+  padding: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.emergency-content {
+  max-width: 750px;
+}
+
+.emergency-content h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.emergency-content p {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 18px;
+  max-width: 650px;
+}
+
+.emergency-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.emergency-btn,
+.support-btn {
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.emergency-btn {
+  background: #111111;
+  color: #ffffff;
+}
+
+.emergency-btn:hover {
+  background: #333333;
+}
+
+.support-btn {
+  border: 1px solid #cccccc;
+  color: #111111;
+}
+
+.support-btn:hover {
+  background: #ffffff;
+}
+
+.emergency-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #111111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+}
+
+/* ==========================================
+   REPORT SAFETY ISSUE
+========================================== */
+
+.report-section {
+  padding: 100px 0;
+  background: #f6f6f4;
+}
+
+.report-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.report-info h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.report-info p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 20px;
+  max-width: 450px;
+}
+
+/* REPORT FORM */
+
+.report-form {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+
+  padding: 12px 14px;
+
+  font-size: 13px;
+  color: #111111;
+  background: #ffffff;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input,
+.form-group select {
+  height: 50px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* REPORT BUTTON */
+
+.report-btn {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  min-height: 55px;
+
+  border-radius: 8px;
+
+  background: #111111;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  transition: 0.3s;
+}
+
+.report-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.report-btn span {
+  font-size: 18px;
+}
+
+.report-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ==========================================
+   FAQ
+========================================== */
+
+.faq-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.faq-list {
+  max-width: 850px;
+  border-top: 1px solid #dddddd;
+}
+
+.faq-item {
+  border-bottom: 1px solid #dddddd;
+}
+
+.faq-question {
+  width: 100%;
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: none;
+  color: #111111;
+
+  text-align: left;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.faq-icon {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  background: #f1f1ef;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  transition: 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 0 40px 25px 0;
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+  background: #111111;
+  color: #ffffff;
+  padding-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.footer-brand p {
+  color: #888888;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #888888;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  border-top: 1px solid #292929;
+  padding: 22px 0;
+  color: #666666;
+  font-size: 10px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .nav {
+    gap: 18px;
+  }
+
+  .safety-hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-safety-card {
+    min-height: 280px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .before-ride-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .report-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .emergency-card {
+    padding: 40px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .container {
+    width: min(92%, 1180px);
+  }
+
+  /* HEADER */
+
+  .nav-container {
+    min-height: 70px;
+  }
+
+  .nav {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+
+    gap: 0;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* HERO */
+
+  .safety-hero {
+    padding: 70px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-safety-card {
+    padding: 30px;
+    min-height: 250px;
+  }
+
+  /* SECTIONS */
+
+  .safety-features,
+  .before-ride,
+  .during-ride,
+  .report-section,
+  .faq-section {
+    padding: 70px 0;
+  }
+
+  .emergency-section {
+    padding: 60px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+    letter-spacing: -1.5px;
+  }
+
+  /* FEATURE GRID */
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 28px;
+  }
+
+  /* CHECKLIST */
+
+  .safety-checklist {
+    padding: 10px 20px;
+  }
+
+  /* HELP */
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-card {
+    padding: 28px;
+  }
+
+  /* EMERGENCY */
+
+  .emergency-card {
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .emergency-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .emergency-content h2 {
+    font-size: 34px;
+    letter-spacing: -1.5px;
+  }
+
+  .emergency-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .emergency-btn,
+  .support-btn {
+    width: 100%;
+  }
+
+  /* REPORT FORM */
+
+  .report-form {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  .report-btn {
+    grid-column: auto;
+  }
+
+  .report-message {
+    grid-column: auto;
+  }
+
+  /* FOOTER */
+
+  .footer-content {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+}
