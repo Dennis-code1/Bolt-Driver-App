@@ -1,42 +1,82 @@
+// LOUISE TRANSPORT - SAFETY PAGE
+// FIREBASE + JAVASCRIPT
 // ==========================================
-// LOUISE TRANSPORT - SAFETY PAGE JAVASCRIPT
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+// ==========================================
+// FIREBASE CONFIGURATION
+// ==========================================
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC8kJ0q0TNa-LwtpkUawdhQ1RxkBsdCeEI",
+  authDomain: "louise-transport-668ba.firebaseapp.com",
+  projectId: "louise-transport-668ba",
+  storageBucket: "louise-transport-668ba.firebasestorage.app",
+  messagingSenderId: "1017349797885",
+  appId: "1:1017349797885:web:2df6d87175e9b7acb68b94",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
+const db = getFirestore(app);
+
+// ==========================================
+// PAGE LOADED
 // ==========================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ==========================================
-  // MOBILE MENU
-  // ==========================================
+  setupMobileMenu();
+  setupFAQ();
+  setupShareTrip();
+  setupSafetyReport();
+  setupSmoothScrolling();
+});
 
+// ==========================================
+// MOBILE MENU
+// ==========================================
+
+function setupMobileMenu() {
   const menuBtn = document.getElementById("menuBtn");
   const nav = document.querySelector(".nav");
 
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("show");
+  if (!menuBtn || !nav) return;
 
-      // Change menu icon
-      if (nav.classList.contains("show")) {
-        menuBtn.textContent = "✕";
-      } else {
-        menuBtn.textContent = "☰";
-      }
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("show");
+
+    if (nav.classList.contains("show")) {
+      menuBtn.textContent = "✕";
+    } else {
+      menuBtn.textContent = "☰";
+    }
+  });
+
+  const navLinks = nav.querySelectorAll("a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("show");
+      menuBtn.textContent = "☰";
     });
+  });
+}
 
-    // Close menu after clicking a navigation link
-    const navLinks = nav.querySelectorAll("a");
+// ==========================================
+// FAQ ACCORDION
+// ==========================================
 
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("show");
-        menuBtn.textContent = "☰";
-      });
-    });
-  }
-
-  // ==========================================
-  // FAQ ACCORDION
-  // ==========================================
-
+function setupFAQ() {
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
@@ -54,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         otherItem.classList.remove("active");
 
         const otherAnswer = otherItem.querySelector(".faq-answer");
+
         const otherIcon = otherItem.querySelector(".faq-icon");
 
         if (otherAnswer) {
@@ -68,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Open selected FAQ
       if (!isOpen) {
         item.classList.add("active");
+
         answer.style.maxHeight = answer.scrollHeight + "px";
 
         if (icon) {
@@ -76,151 +118,209 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+}
 
-  // ==========================================
-  // SHARE TRIP
-  // ==========================================
+// ==========================================
+// SHARE TRIP
+// ==========================================
 
+function setupShareTrip() {
   const shareTripBtn = document.getElementById("shareTripBtn");
 
-  if (shareTripBtn) {
-    shareTripBtn.addEventListener("click", async () => {
-      const shareData = {
-        title: "Louise Transport",
-        text: "I'm using Louise Transport. You can use this link to check my trip information.",
-        url: window.location.href,
-      };
+  if (!shareTripBtn) return;
 
-      // Use phone's native share menu when available
-      if (navigator.share) {
-        try {
-          await navigator.share(shareData);
+  shareTripBtn.addEventListener("click", async () => {
+    const shareData = {
+      title: "Louise Transport",
+      text: "I'm using Louise Transport. Check my trip information.",
+      url: window.location.href,
+    };
 
-          showTemporaryMessage(shareTripBtn, "Trip shared!", "Share Trip");
-        } catch (error) {
-          // User cancelled sharing
-          console.log("Share cancelled.");
-        }
-      } else {
-        // Fallback: copy link to clipboard
-        try {
-          await navigator.clipboard.writeText(window.location.href);
+    // Mobile / supported browsers
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
 
-          showTemporaryMessage(shareTripBtn, "Link copied!", "Share Trip");
-        } catch (error) {
-          alert("Please copy the page link manually.");
-        }
-      }
-    });
-  }
-
-  // ==========================================
-  // SAFETY REPORT FORM
-  // ==========================================
-
-  const safetyReportForm = document.getElementById("safetyReportForm");
-  const reportMessageStatus = document.getElementById("reportMessageStatus");
-
-  if (safetyReportForm) {
-    safetyReportForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const reportName = document.getElementById("reportName");
-      const reportContact = document.getElementById("reportContact");
-      const rideId = document.getElementById("rideId");
-      const issueType = document.getElementById("issueType");
-      const reportMessage = document.getElementById("reportMessage");
-
-      // Check required fields
-      if (!reportName || !reportContact || !issueType || !reportMessage) {
-        return;
+        showTemporaryButtonMessage(shareTripBtn, "Trip Shared!", "Share Trip");
+      } catch (error) {
+        console.log("Share cancelled.");
       }
 
-      if (
-        reportName.value.trim() === "" ||
-        reportContact.value.trim() === "" ||
-        issueType.value === "" ||
-        reportMessage.value.trim() === ""
-      ) {
-        showReportMessage("Please complete all required fields.", "error");
-        return;
-      }
+      return;
+    }
 
-      // Create report object
-      const safetyReport = {
-        name: reportName.value.trim(),
-        contact: reportContact.value.trim(),
-        rideId: rideId ? rideId.value.trim() : "",
-        issueType: issueType.value,
-        message: reportMessage.value.trim(),
-        submittedAt: new Date().toISOString(),
-      };
+    // Fallback for browsers without Web Share API
+    try {
+      await navigator.clipboard.writeText(window.location.href);
 
-      // Save report temporarily in browser
-      const existingReports =
-        JSON.parse(localStorage.getItem("louiseSafetyReports")) || [];
+      showTemporaryButtonMessage(shareTripBtn, "Link Copied!", "Share Trip");
+    } catch (error) {
+      alert("Unable to copy the link. Please copy it manually.");
+    }
+  });
+}
 
-      existingReports.push(safetyReport);
+// ==========================================
+// SAFETY REPORT
+// ==========================================
 
-      localStorage.setItem(
-        "louiseSafetyReports",
-        JSON.stringify(existingReports),
-      );
+function setupSafetyReport() {
+  const form = document.getElementById("safetyReportForm");
 
-      // Show success message
+  const statusMessage = document.getElementById("reportMessageStatus");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const reportName = document.getElementById("reportName");
+
+    const reportContact = document.getElementById("reportContact");
+
+    const rideId = document.getElementById("rideId");
+
+    const issueType = document.getElementById("issueType");
+
+    const reportMessage = document.getElementById("reportMessage");
+
+    // ==========================================
+    // VALIDATION
+    // ==========================================
+
+    if (!reportName || !reportContact || !issueType || !reportMessage) {
+      return;
+    }
+
+    if (
+      reportName.value.trim() === "" ||
+      reportContact.value.trim() === "" ||
+      issueType.value === "" ||
+      reportMessage.value.trim() === ""
+    ) {
+      showReportMessage("Please complete all required fields.", "error");
+
+      return;
+    }
+
+    // ==========================================
+    // DISABLE BUTTON
+    // ==========================================
+
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+    }
+
+    // ==========================================
+    // CREATE SAFETY REPORT
+    // ==========================================
+
+    const safetyReport = {
+      name: reportName.value.trim(),
+
+      contact: reportContact.value.trim(),
+
+      rideId: rideId ? rideId.value.trim() : "",
+
+      issueType: issueType.value,
+
+      message: reportMessage.value.trim(),
+
+      status: "new",
+
+      submittedAt: serverTimestamp(),
+    };
+
+    try {
+      // ==========================================
+      // SAVE TO FIRESTORE
+      // ==========================================
+
+      await addDoc(collection(db, "safetyReports"), safetyReport);
+
+      // ==========================================
+      // SUCCESS
+      // ==========================================
+
       showReportMessage(
-        "Thank you. Your safety report has been submitted successfully.",
+        "Your safety report has been submitted successfully. Thank you for reporting this issue.",
         "success",
       );
 
       // Clear form
-      safetyReportForm.reset();
-    });
-  }
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting safety report:", error);
 
-  // ==========================================
-  // REPORT MESSAGE FUNCTION
-  // ==========================================
+      showReportMessage(
+        "Unable to submit your report right now. Please try again.",
+        "error",
+      );
+    }
 
-  function showReportMessage(message, type) {
-    if (!reportMessageStatus) return;
+    // ==========================================
+    // ENABLE BUTTON
+    // ==========================================
 
-    reportMessageStatus.textContent = message;
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit Report";
+    }
+  });
+}
 
-    reportMessageStatus.className = "report-message " + type;
+// ==========================================
+// SHOW REPORT MESSAGE
+// ==========================================
 
-    // Remove message after a few seconds
-    setTimeout(() => {
-      reportMessageStatus.textContent = "";
-      reportMessageStatus.className = "report-message";
-    }, 5000);
-  }
+function showReportMessage(message, type) {
+  const statusMessage = document.getElementById("reportMessageStatus");
 
-  // ==========================================
-  // TEMPORARY BUTTON MESSAGE
-  // ==========================================
+  if (!statusMessage) return;
 
-  function showTemporaryMessage(button, temporaryText, originalText) {
-    button.textContent = temporaryText;
-    button.disabled = true;
+  statusMessage.textContent = message;
 
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.disabled = false;
-    }, 2000);
-  }
+  statusMessage.className = "report-message " + type;
 
-  // ==========================================
-  // SMOOTH SCROLLING
-  // ==========================================
+  setTimeout(() => {
+    statusMessage.textContent = "";
+    statusMessage.className = "report-message";
+  }, 6000);
+}
 
+// ==========================================
+// TEMPORARY BUTTON MESSAGE
+// ==========================================
+
+function showTemporaryButtonMessage(button, temporaryText, originalText) {
+  button.textContent = temporaryText;
+
+  button.disabled = true;
+
+  setTimeout(() => {
+    button.textContent = originalText;
+
+    button.disabled = false;
+  }, 2000);
+}
+
+// ==========================================
+// SMOOTH SCROLLING
+// ==========================================
+
+function setupSmoothScrolling() {
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
   anchorLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
       const targetId = link.getAttribute("href");
 
-      if (!targetId || targetId === "#") return;
+      if (!targetId || targetId === "#") {
+        return;
+      }
 
       const target = document.querySelector(targetId);
 
@@ -234,16 +334,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  // ==========================================
-  // EMERGENCY BUTTON
-  // ==========================================
-
-  const emergencyButtons = document.querySelectorAll('a[href="tel:112"]');
-
-  emergencyButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      console.log("Emergency call button selected.");
-    });
-  });
-});
+}
