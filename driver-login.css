@@ -1,0 +1,523 @@
+/* ==========================================
+   LOUISE TRANSPORT - DRIVER LOGIN
+   ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #0b0b0b;
+  --dark: #141414;
+  --gray-dark: #333;
+  --gray: #6b6b6b;
+  --gray-light: #f4f4f4;
+  --white: #ffffff;
+  --border: #e5e5e5;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.logo-text {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.back-link {
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--black);
+}
+
+/* ==========================================
+   LOGIN SECTION
+   ========================================== */
+
+.login-section {
+  min-height: calc(100vh - 76px);
+  padding: 80px 0;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+}
+
+.login-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 470px;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ==========================================
+   LEFT INTRO
+   ========================================== */
+
+.login-intro {
+  max-width: 520px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.login-intro h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -3px;
+  margin-bottom: 24px;
+}
+
+.login-intro h1 span {
+  display: block;
+}
+
+.login-intro > p {
+  color: var(--gray);
+  font-size: 17px;
+  max-width: 500px;
+  margin-bottom: 42px;
+}
+
+/* ==========================================
+   FEATURES
+   ========================================== */
+
+.driver-features {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.feature strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.feature small {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+/* ==========================================
+   LOGIN CARD
+   ========================================== */
+
+.login-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 42px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+.login-heading {
+  margin-bottom: 30px;
+}
+
+.login-heading h2 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-bottom: 7px;
+}
+
+.login-heading p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* ==========================================
+   FORM
+   ========================================== */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 15px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+  background: var(--white);
+}
+
+.form-group input:focus {
+  border-color: var(--black);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-label label {
+  margin-bottom: 8px;
+}
+
+.password-label a {
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.password-label a:hover {
+  color: var(--black);
+}
+
+/* ==========================================
+   REMEMBER ME
+   ========================================== */
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray);
+  font-size: 13px;
+  margin: 5px 0 24px;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--black);
+}
+
+/* ==========================================
+   LOGIN BUTTON
+   ========================================== */
+
+.login-button {
+  width: 100%;
+  min-height: 54px;
+  border: none;
+  border-radius: 10px;
+  background: var(--black);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==========================================
+   MESSAGE
+   ========================================== */
+
+.login-message {
+  display: none;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ==========================================
+   SIGN UP
+   ========================================== */
+
+.signup-link {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+.signup-link p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.signup-link a {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   SECURITY NOTE
+   ========================================== */
+
+.security-note {
+  margin-top: 24px;
+  padding: 14px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--gray);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 45px 0 25px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-brand .logo-text {
+  color: var(--white);
+}
+
+.footer-brand .logo-text span {
+  color: #aaa;
+}
+
+.footer-brand p {
+  color: #999;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #aaa;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+.copyright {
+  border-top: 1px solid #292929;
+  margin-top: 35px;
+  padding-top: 20px;
+}
+
+.copyright p {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+  .login-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 600px;
+  }
+
+  .login-intro {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .login-intro > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .driver-features {
+    text-align: left;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .login-card {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+  .nav-container {
+    min-height: 68px;
+  }
+
+  .logo-mark {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .back-link {
+    font-size: 12px;
+  }
+
+  .login-section {
+    padding: 55px 0;
+  }
+
+  .login-intro h1 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .login-intro > p {
+    font-size: 15px;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .login-heading h2 {
+    font-size: 26px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+}
