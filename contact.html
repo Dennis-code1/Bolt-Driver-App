@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Us | Louise Transport</title>
+
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="Driver hompeage index.html" class="logo">
+          <span class="logo-icon">L</span>
+          <span> Louise<span class="logo-light">Transport</span> </span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="Driver hompeage index.html">Home</a>
+          <a href="book-ride.html">Ride</a>
+          <a href="driver.html">Drive</a>
+          <a href="Safety.html">Safety</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="driver-login.html" class="login-link"> Login </a>
+
+          <a href="book-ride.html" class="header-button"> Book a Ride </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="contact-hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <span class="hero-label"> CONTACT LOUISE </span>
+
+        <h1>
+          We're here to
+          <span>help.</span>
+        </h1>
+
+        <p>
+          Have a question about a ride, your driver account, payments or
+          anything else? Get in touch with the Louise Transport team.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT INTRO ================= -->
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+          <span class="section-label"> GET IN TOUCH </span>
+
+          <h2>How can we help you?</h2>
+
+          <p class="intro-text">
+            Choose the support option that best matches your question. Our goal
+            is to make getting assistance simple.
+          </p>
+
+          <!-- EMAIL -->
+
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+
+            <div>
+              <h3>Email Support</h3>
+
+              <p>For general questions and support.</p>
+
+              <a href="mailto:support@louisetransport.com">
+                support@louisetransport.com
+              </a>
+            </div>
+          </div>
+
+          <!-- PHONE -->
+
+          <div class="contact-item">
+            <div class="contact-icon">☎</div>
+
+            <div>
+              <h3>Phone Support</h3>
+
+              <p>Speak with our support team.</p>
+
+              <a href="tel:+233000000000"> +233 00 000 0000 </a>
+            </div>
+          </div>
+
+          <!-- LOCATION -->
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+
+            <div>
+              <h3>Location</h3>
+
+              <p>Louise Transport</p>
+
+              <span> Accra, Ghana </span>
+            </div>
+          </div>
+
+          <!-- HOURS -->
+
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+
+            <div>
+              <h3>Support Hours</h3>
+
+              <p>Monday – Sunday</p>
+
+              <span> 24/7 ride assistance </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form-card">
+          <div class="form-header">
+            <span class="section-label"> SEND A MESSAGE </span>
+
+            <h2>Tell us what you need.</h2>
+
+            <p>Fill out the form and our team can get back to you.</p>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName"> First Name </label>
+
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Your first name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="lastName"> Last Name </label>
+
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email"> Email Address </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone"> Phone Number </label>
+
+              <input type="tel" id="phone" name="phone" placeholder="+233" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject"> What do you need help with? </label>
+
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+
+                <option value="ride">Ride Support</option>
+
+                <option value="driver">Driver Support</option>
+
+                <option value="payment">Payment Issue</option>
+
+                <option value="account">Account Issue</option>
+
+                <option value="lost-item">Lost Item</option>
+
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message"> Message </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us how we can help..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">
+              Send Message
+              <span>→</span>
+            </button>
+
+            <p id="formMessage"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SUPPORT OPTIONS ================= -->
+
+    <section class="support-section">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-label"> SUPPORT </span>
+
+          <h2>Need help with something specific?</h2>
+
+          <p>Find the right place to get assistance.</p>
+        </div>
+
+        <div class="support-grid">
+          <!-- RIDER -->
+
+          <div class="support-card">
+            <div class="support-icon">🚗</div>
+
+            <h3>I'm a Rider</h3>
+
+            <p>
+              Get help with booking rides, payments, destinations, accounts and
+              trips.
+            </p>
+
+            <a href="book-ride.html">
+              Book a Ride
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- DRIVER -->
+
+          <div class="support-card">
+            <div class="support-icon">🚘</div>
+
+            <h3>I'm a Driver</h3>
+
+            <p>
+              Get assistance with your driver account, applications, rides and
+              earnings.
+            </p>
+
+            <a href="driver.html">
+              Driver Support
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- SAFETY -->
+
+          <div class="support-card">
+            <div class="support-icon">🛡</div>
+
+            <h3>Safety Support</h3>
+
+            <p>
+              Learn about safety features and what to do when you need urgent
+              assistance.
+            </p>
+
+            <a href="Safety.html">
+              Safety Centre
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LOCATION ================= -->
+
+    <section class="location-section">
+      <div class="container location-grid">
+        <div class="location-content">
+          <span class="section-label"> LOUISE IN GHANA </span>
+
+          <h2>Connecting people across Ghana.</h2>
+
+          <p>
+            Louise Transport is designed with Ghanaian riders and drivers in
+            mind, starting from Accra and expanding as the platform grows.
+          </p>
+
+          <div class="location-details">
+            <div>
+              <strong>Country</strong>
+              <span>Ghana</span>
+            </div>
+
+            <div>
+              <strong>City</strong>
+              <span>Accra</span>
+            </div>
+
+            <div>
+              <strong>Service</strong>
+              <span>Ride-hailing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-box">
+          <div class="map-header">
+            <span class="map-status"></span>
+
+            <span> Louise Transport </span>
+          </div>
+
+          <div class="fake-map">
+            <div class="map-line line-one"></div>
+            <div class="map-line line-two"></div>
+            <div class="map-line line-three"></div>
+            <div class="map-line line-four"></div>
+
+            <div class="location-pin">📍</div>
+
+            <div class="map-label">Accra, Ghana</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EMERGENCY ================= -->
+
+    <section class="emergency-section">
+      <div class="container emergency-box">
+        <div class="emergency-icon">!</div>
+
+        <div class="emergency-content">
+          <span class="section-label"> IMPORTANT </span>
+
+          <h2>In an emergency during a ride</h2>
+
+          <p>
+            If you are in immediate danger, contact the appropriate emergency
+            services first. Louise Transport safety tools can also be used
+            during an active trip where available.
+          </p>
+        </div>
+
+        <a href="Safety.html" class="emergency-button">
+          View Safety Information
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-label"> COMMON QUESTIONS </span>
+
+          <h2>Before you contact us</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>
+              How do I book a ride?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Go to the Book a Ride page, enter your pickup and destination
+              details, select your ride option and continue with your booking.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How can I become a Louise driver?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Visit the Drive page and select Apply to Drive. You can then
+              provide your personal, vehicle and driver information.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What if I have a payment problem?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Select Payment Issue on the contact form and provide the relevant
+              details so the support team can review your request.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What should I do if I lose something?
+              <span>+</span>
+            </summary>
+
+            <p>
+              Contact Louise Transport support and provide details about the
+              ride and the item you lost.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="contact-cta">
+      <div class="container cta-content">
+        <span class="section-label"> LOUISE TRANSPORT </span>
+
+        <h2>We're ready when you are.</h2>
+
+        <p>Need a ride? Or ready to join Louise as a driver?</p>
+
+        <div class="cta-buttons">
+          <a href="book-ride.html" class="primary-button">
+            Book a Ride
+            <span>→</span>
+          </a>
+
+          <a href="driver-signup.html" class="outline-button">
+            Become a Driver
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="Driver hompeage index.html" class="logo footer-logo">
+            <span class="logo-icon"> L </span>
+
+            <span> Louise<span class="logo-light">Transport</span> </span>
+          </a>
+
+          <p>Modern transportation built for Ghana.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+
+          <a href="about.html"> About </a>
+
+          <a href="Safety.html"> Safety </a>
+
+          <a href="contact.html"> Contact </a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Riders</h4>
+
+          <a href="book-ride.html"> Book a Ride </a>
+
+          <a href="book-ride.html"> Ride Options </a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Drivers</h4>
+
+          <a href="driver-signup.html"> Drive with Louise </a>
+
+          <a href="driver-login.html"> Driver Login </a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 Louise Transport. All rights reserved.</p>
+
+        <div class="footer-links">
+          <a href="#"> Privacy </a>
+
+          <a href="#"> Terms </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= SIMPLE FORM SCRIPT ================= -->
+
+    <script>
+      const contactForm = document.getElementById("contactForm");
+
+      const formMessage = document.getElementById("formMessage");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        formMessage.textContent = "Thank you! Your message has been received.";
+
+        formMessage.style.display = "block";
+
+        contactForm.reset();
+      });
+    </script>
+  </body>
+</html>
